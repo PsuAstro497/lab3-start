@@ -5,15 +5,16 @@
 
 ## Goals
 In this lab, students will learn to:
-- Fit a linear model to data
+- Measure the orbital period of a transiting planet
+- Fit a linear model to data using multipe techniques
+- Check for convergence of optimization algorithm
 
 Students will strengthen their understanding of: 
-- Analyzing transit observations
+- Transit observations
 - Direct fitting of general linear models via linear algebra
 - Limitations of linear models
 - Loss function surface for linear models
 - Model fitting via optimization of loss function
-- Checking for convergence of optimization algorithm
 
 ## Logistics
 Follow the link provided via Canvas to create your own private copy of this lab's repository on GitHub.com.   

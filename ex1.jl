@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.11
+# v0.19.9
 
 using Markdown
 using InteractiveUtils
@@ -111,7 +111,7 @@ if ismissing(response_1a)
 end
 
 # ╔═╡ 027fefd1-85fa-4de4-8717-1f7373343793
-md""""**Q1b:**  Do you notice anything potentially concerning about the plot?  If so, describe your concerns.  Optionally, use the cell below to perform any tests to address your concerns."""
+md"""**Q1b:**  Do you notice anything potentially concerning about the plot?  If so, describe your concerns.  Optionally, use the cell below to perform any tests to address your concerns."""
 
 # ╔═╡ 5df94b2c-7bb5-4b86-a2d8-c46d12324600
 response_1b = missing
@@ -473,9 +473,9 @@ if ismissing(response_3a)
 	still_missing()
 elseif typeof(response_3a) != String
 	danger(md"Please set response above to a string.")
-elseif !(lowercase(response_3a)∈["t_0","P"])
+elseif !(lowercase(response_3a)∈["t_0","p"])
 	danger(md"""Please set response to either `"t_0"` or `"P"`.""")
-elseif lowercase(response_3a)!="P"
+elseif lowercase(response_3a)!="p"
 	keep_working(md"Look at the figure above more closely.")
 else
 	correct()
@@ -513,7 +513,7 @@ md"""
 """
 
 # ╔═╡ c05feaba-7833-4166-a1df-841727237f8f
-response_3c = missing # missing  # Set to an integer
+response_3c = missing # Set to an integer
 
 # ╔═╡ 2d8193e9-6f69-4d76-90e0-921a09210e83
 if ismissing(response_3c)
@@ -564,6 +564,7 @@ Optim.minimizer(result_opt_ignore_gradient) .- θ_mle
 
 # ╔═╡ 68694196-5121-4427-b12c-3deecee760d5
 md"""
+The above differences should be quite small, less than $10^{-8}$, indicating that the iterative method converged to very nearly the same values as the solution via linear algebra.
 
 One key property of our loss function is that it is differentiable and smooth.  This makes it possible to apply optimization algorithms that use the gradient of $\ell$ to find the maximium likelihood solution.
 """
@@ -597,8 +598,8 @@ end
 
 # ╔═╡ 109f6d30-b329-42a4-9c5d-4ab67b1f3978
 md"""
-We see that the algorithm rapid improves the estimate, but subsequent progress is much slower.
-By default, the optimization routine adopts a very strict set of criteria for converge, and warns us that those weren't met, so we don't make erroneous inferences.
+We see that the algorithm rapidly improves the estimate, but subsequent progress is much slower.
+By default, the optimization routine adopts a very strict set of criteria for convergence and warns us that those weren't met, so we don't make erroneous inferences.
 In this case, we can use our understanding of the loss function to define a convergence criterion appropriate to our problem.  For example,
 """
 
@@ -2287,7 +2288,7 @@ version = "1.4.1+0"
 # ╠═47573139-cdb5-42d9-82eb-ddce83118188
 # ╟─350ee047-1b98-4a38-af8c-f4d643c080b4
 # ╟─54212229-5fd6-4496-9f79-dca75d5dab55
-# ╠═109f6d30-b329-42a4-9c5d-4ab67b1f3978
+# ╟─109f6d30-b329-42a4-9c5d-4ab67b1f3978
 # ╠═126cc007-73c6-4320-85db-a72585eafa1a
 # ╠═000f7c46-78b1-4d3d-8aa3-848bca838d19
 # ╟─a579eeb9-f6fa-4deb-8518-2ee92639fd46
